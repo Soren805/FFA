@@ -1,0 +1,16 @@
+name: FFA
+version: 1.5
+author: Soren805
+main: fr.soren805.ffa.FFA
+commands:
+  ffa:
+    description: Teleport you to the FFA spawn
+  setffaspawn:
+    description: Set the FFA spawn
+    permission: ffa.use
+  ffastats:
+    description: Get your stats of the FFA game
+  ffacommands:
+    description: Show all the FFA plugin commands
+  ffakit:
+    description: Get the FFA kit

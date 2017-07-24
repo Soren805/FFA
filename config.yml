@@ -1,0 +1,162 @@
+#######################################################
+#  FFFFFFFFFF        FFFFFFFFFF              A        #
+#  F                 F                      A  A      # 
+#  F                 F                     A    A     #
+#  FFFFFFFFFF        FFFFFFFFFF           AAAAAAAA    #
+#  F                 F                   A        A   #
+#  F                 F                  A          A  #
+#                                                     #
+#     A simple FFA plugin with configuration file.    #
+#######################################################
+
+# For colors, use the symbol & with the number/letter (for example &e for yellow)
+#
+# Use {PLAYER} for the player name
+# Use {KILLER} for the player killer (work only for "death-message" and for "kills-reach")
+# Use {ITEM} for the item name (work only for "drop-item-message")
+# Use {BLOCK} for the block type (work only for "block-break-message")
+# Use {REASON} for the kicked player reason (work only for "kick-message")
+#
+# For items number, you can enter maximum 1 stack (64)
+
+ffa:
+
+#######################################################
+#  FFFFFFFFFF        FFFFFFFFFF              A        #
+#  F                 F                      A  A      # 
+#  F                 F                     A    A     #
+#  FFFFFFFFFF        FFFFFFFFFF           AAAAAAAA    #
+#  F                 F                   A        A   #
+#  F                 F                  A          A  #
+#                                                     #
+#                       Spawn                         #
+#######################################################
+
+  spawn:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    yaw: 0.0
+    pitch: 0.0
+    worldName: world
+    
+#######################################################
+#  FFFFFFFFFF        FFFFFFFFFF              A        #
+#  F                 F                      A  A      # 
+#  F                 F                     A    A     #
+#  FFFFFFFFFF        FFFFFFFFFF           AAAAAAAA    #
+#  F                 F                   A        A   #
+#  F                 F                  A          A  #
+#                                                     #
+#                      Messages                       #
+#######################################################    
+    
+  messages:
+    join-message: "&6{PLAYER} &2joined the game."
+    leave-message: "&6{PLAYER} &2left the game."
+    death-message: "&6{PLAYER} &2has been killed by &6{KILLER}&2."
+    item-drop-message: "&2You cannot drop the item &6{ITEM}&2!"
+    block-break-message: "&2You cannot break the block &6{BLOCK}&2!"
+    kick-message: "&6{PLAYER} &2has been kicked of the server for : &6{REASON}&2."
+    gived-ffa-kit: "&2You have been given the FFA kit."
+    on-ffa-join:
+      message: "&2Type in the chat the command &6/ffastats &2to view your game statistics."
+    spawn:
+      teleported-to-ffa-spawn: "&2You have been teleported to the FFA spawn."
+      changed-ffa-spawn: "&2You have changed the FFA spawn."
+    kills-reach: 
+      50-kills: "&6{KILLER} &2has reached &650 &2kills!"
+      100-kills: "&6{KILLER} &2has reached &6100 &2kills!"
+      150-kills: "&6{KILLER} &2has reached &6150 &2kills!"
+      200-kills: "&6{KILLER} &2has reached &6200 &2kills!"
+      250-kills: "&6{KILLER} &2has reached &6250 &2kills!"
+      300-kills: "&6{KILLER} &2has reached &6300 &2kills!"
+      350-kills: "&6{KILLER} &2has reached &6350 &2kills!"
+      450-kills: "&6{KILLER} &2has reached &6450 &2kills!"
+      500-kills: "&6{KILLER} &2has reached &6500 &2kills!"
+      550-kills: "&6{KILLER} &2has reached &6550 &2kills!"
+      600-kills: "&6{KILLER} &2has reached &6600 &2kills!"
+      650-kills: "&6{KILLER} &2has reached &6500 &2kills!"
+      700-kills: "&6{KILLER} &2has reached &6700 &2kills!"
+      750-kills: "&6{KILLER} &2has reached &6750 &2kills!"
+      800-kills: "&6{KILLER} &2has reached &6800 &2kills!"
+      850-kills: "&6{KILLER} &2has reached &6850 &2kills!"
+      900-kills: "&6{KILLER} &2has reached &6900 &2kills!"
+      950-kills: "&6{KILLER} &2has reached &69500 &2kills!"
+      1000-kills: "&6{KILLER} &2has reached &61000 &2kills!"
+      
+#######################################################
+#  FFFFFFFFFF        FFFFFFFFFF              A        #
+#  F                 F                      A  A      # 
+#  F                 F                     A    A     #
+#  FFFFFFFFFF        FFFFFFFFFF           AAAAAAAA    #
+#  F                 F                   A        A   #
+#  F                 F                  A          A  #
+#                                                     #
+#                        Other                        #
+#######################################################      
+   
+  other:
+    player:
+      on-death:
+        respawn-at-ffa-spawn: true
+        give-ffa-kit-at-respawn: false
+        give-all-life-to-the-killer: true
+        give-all-food-to-the-killer: false
+      on-join:
+        give-all-life-to-the-player: true
+        give-all-food-to-the-player: true
+        enable-ffa-join-message: true
+      can-break-blocks: false
+      can-drop-items: false
+      teleport-on-server-join: false
+      give-kit-on-server-join: false
+      
+#######################################################
+#  FFFFFFFFFF        FFFFFFFFFF              A        #
+#  F                 F                      A  A      # 
+#  F                 F                     A    A     #
+#  FFFFFFFFFF        FFFFFFFFFF           AAAAAAAA    #
+#  F                 F                   A        A   #
+#  F                 F                  A          A  #
+#                                                     #
+#                        Kit                          #
+#######################################################      
+      
+    kit:
+      item1:
+        name: "&2Iron sword"
+        id: 267
+        number: 1
+        unbreakable: true
+      item2:
+        name: "&2Bow"
+        id: 261
+        number: 1
+        unbreakable: true
+      item3:
+        name: "&2Arrows"
+        id: 262
+        number: 64
+        unbreakable: true
+      item4:
+        name: "&2Cooked beef"
+        id: 364
+        number: 64
+        unbreakable: true
+      helmet:
+        name: "&2Helmet"
+        id: 298
+        unbreakable: true
+      chestplate:
+        name: "&2Chestplate"
+        id: 299
+        unbreakable: true
+      leggings:
+        name: "&2Leggings"
+        id: 300
+        unbreakable: true
+      boots:
+        name: "&2Boots"
+        id: 301
+        unbreakable: true
